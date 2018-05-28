@@ -1,0 +1,399 @@
+Analysis & Synthesis report for finalproject1
+Sat Dec 16 13:29:47 2017
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |finalproject1|next_command
+  9. State Machine - |finalproject1|state
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Dec 16 13:29:47 2017        ;
+; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                      ; finalproject1                                ;
+; Top-level Entity Name              ; finalproject1                                ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 274                                          ;
+;     Total combinational functions  ; 272                                          ;
+;     Dedicated logic registers      ; 62                                           ;
+; Total registers                    ; 62                                           ;
+; Total pins                         ; 31                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F896C6       ;                    ;
+; Top-level entity name                                                      ; finalproject1      ; finalproject1      ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                           ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path              ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+
+; finalproject1.vhd                ; yes             ; User VHDL File  ; C:/altera/91sp2/quartus/finalproject1.vhd ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 274           ;
+;                                             ;               ;
+; Total combinational functions               ; 272           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 167           ;
+;     -- 3 input functions                    ; 45            ;
+;     -- <=2 input functions                  ; 60            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 245           ;
+;     -- arithmetic mode                      ; 27            ;
+;                                             ;               ;
+; Total registers                             ; 62            ;
+;     -- Dedicated logic registers            ; 62            ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 31            ;
+; Maximum fan-out node                        ; char_count[3] ;
+; Maximum fan-out                             ; 66            ;
+; Total fan-out                               ; 1164          ;
+; Average fan-out                             ; 3.19          ;
++---------------------------------------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |finalproject1             ; 272 (272)         ; 62 (62)      ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |finalproject1      ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |finalproject1|next_command                                                                                                                                                                                                                                                                                ;
++----------------------------+---------------------+--------------------------+--------------------+---------------------------+-----------------------+--------------------------+----------------------------+-------------------------+-----------------------+-------------------+-------------------+-------------------+
+; Name                       ; next_command.en_off ; next_command.return_home ; next_command.line2 ; next_command.print_string ; next_command.mode_set ; next_command.display_off ; next_command.display_clear ; next_command.display_on ; next_command.func_set ; next_command.rst3 ; next_command.rst1 ; next_command.rst2 ;
++----------------------------+---------------------+--------------------------+--------------------+---------------------------+-----------------------+--------------------------+----------------------------+-------------------------+-----------------------+-------------------+-------------------+-------------------+
+; next_command.rst2          ; 0                   ; 0                        ; 0                  ; 0                         ; 0                     ; 0                        ; 0                          ; 0                       ; 0                     ; 0                 ; 0                 ; 0                 ;
+; next_command.rst1          ; 0                   ; 0                        ; 0                  ; 0                         ; 0                     ; 0                        ; 0                          ; 0                       ; 0                     ; 0                 ; 1                 ; 1                 ;
+; next_command.rst3          ; 0                   ; 0                        ; 0                  ; 0                         ; 0                     ; 0                        ; 0                          ; 0                       ; 0                     ; 1                 ; 0                 ; 1                 ;
+; next_command.func_set      ; 0                   ; 0                        ; 0                  ; 0                         ; 0                     ; 0                        ; 0                          ; 0                       ; 1                     ; 0                 ; 0                 ; 1                 ;
+; next_command.display_on    ; 0                   ; 0                        ; 0                  ; 0                         ; 0                     ; 0                        ; 0                          ; 1                       ; 0                     ; 0                 ; 0                 ; 1                 ;
+; next_command.display_clear ; 0                   ; 0                        ; 0                  ; 0                         ; 0                     ; 0                        ; 1                          ; 0                       ; 0                     ; 0                 ; 0                 ; 1                 ;
+; next_command.display_off   ; 0                   ; 0                        ; 0                  ; 0                         ; 0                     ; 1                        ; 0                          ; 0                       ; 0                     ; 0                 ; 0                 ; 1                 ;
+; next_command.mode_set      ; 0                   ; 0                        ; 0                  ; 0                         ; 1                     ; 0                        ; 0                          ; 0                       ; 0                     ; 0                 ; 0                 ; 1                 ;
+; next_command.print_string  ; 0                   ; 0                        ; 0                  ; 1                         ; 0                     ; 0                        ; 0                          ; 0                       ; 0                     ; 0                 ; 0                 ; 1                 ;
+; next_command.line2         ; 0                   ; 0                        ; 1                  ; 0                         ; 0                     ; 0                        ; 0                          ; 0                       ; 0                     ; 0                 ; 0                 ; 1                 ;
+; next_command.return_home   ; 0                   ; 1                        ; 0                  ; 0                         ; 0                     ; 0                        ; 0                          ; 0                       ; 0                     ; 0                 ; 0                 ; 1                 ;
+; next_command.en_off        ; 1                   ; 0                        ; 0                  ; 0                         ; 0                     ; 0                        ; 0                          ; 0                       ; 0                     ; 0                 ; 0                 ; 1                 ;
++----------------------------+---------------------+--------------------------+--------------------+---------------------------+-----------------------+--------------------------+----------------------------+-------------------------+-----------------------+-------------------+-------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |finalproject1|state                                                                                                                                                                                            ;
++---------------------+--------------+-------------------+-------------+--------------------+----------------+-------------------+---------------------+------------------+----------------+------------+------------+------------+
+; Name                ; state.en_off ; state.return_home ; state.line2 ; state.print_string ; state.mode_set ; state.display_off ; state.display_clear ; state.display_on ; state.func_set ; state.rst3 ; state.rst2 ; state.rst1 ;
++---------------------+--------------+-------------------+-------------+--------------------+----------------+-------------------+---------------------+------------------+----------------+------------+------------+------------+
+; state.rst1          ; 0            ; 0                 ; 0           ; 0                  ; 0              ; 0                 ; 0                   ; 0                ; 0              ; 0          ; 0          ; 0          ;
+; state.rst2          ; 0            ; 0                 ; 0           ; 0                  ; 0              ; 0                 ; 0                   ; 0                ; 0              ; 0          ; 1          ; 1          ;
+; state.rst3          ; 0            ; 0                 ; 0           ; 0                  ; 0              ; 0                 ; 0                   ; 0                ; 0              ; 1          ; 0          ; 1          ;
+; state.func_set      ; 0            ; 0                 ; 0           ; 0                  ; 0              ; 0                 ; 0                   ; 0                ; 1              ; 0          ; 0          ; 1          ;
+; state.display_on    ; 0            ; 0                 ; 0           ; 0                  ; 0              ; 0                 ; 0                   ; 1                ; 0              ; 0          ; 0          ; 1          ;
+; state.display_clear ; 0            ; 0                 ; 0           ; 0                  ; 0              ; 0                 ; 1                   ; 0                ; 0              ; 0          ; 0          ; 1          ;
+; state.display_off   ; 0            ; 0                 ; 0           ; 0                  ; 0              ; 1                 ; 0                   ; 0                ; 0              ; 0          ; 0          ; 1          ;
+; state.mode_set      ; 0            ; 0                 ; 0           ; 0                  ; 1              ; 0                 ; 0                   ; 0                ; 0              ; 0          ; 0          ; 1          ;
+; state.print_string  ; 0            ; 0                 ; 0           ; 1                  ; 0              ; 0                 ; 0                   ; 0                ; 0              ; 0          ; 0          ; 1          ;
+; state.line2         ; 0            ; 0                 ; 1           ; 0                  ; 0              ; 0                 ; 0                   ; 0                ; 0              ; 0          ; 0          ; 1          ;
+; state.return_home   ; 0            ; 1                 ; 0           ; 0                  ; 0              ; 0                 ; 0                   ; 0                ; 0              ; 0          ; 0          ; 1          ;
+; state.en_off        ; 1            ; 0                 ; 0           ; 0                  ; 0              ; 0                 ; 0                   ; 0                ; 0              ; 0          ; 0          ; 1          ;
++---------------------+--------------+-------------------+-------------+--------------------+----------------+-------------------+---------------------+------------------+----------------+------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; LED_R[0]$latch                                     ; Mux0                ; yes                    ;
+; LED_R[1]$latch                                     ; Mux0                ; yes                    ;
+; LED_R[2]$latch                                     ; Mux0                ; yes                    ;
+; LED_R[3]$latch                                     ; Mux0                ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; onlcd~reg0                            ; Stuck at VCC due to stuck port data_in ;
+; lcd_rw_int                            ; Stuck at GND due to stuck port data_in ;
+; blon~reg0                             ; Stuck at VCC due to stuck port data_in ;
+; next_command.en_off                   ; Stuck at GND due to stuck port data_in ;
+; next_command.rst1                     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 5 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 62    ;
+; Number of registers using Synchronous Clear  ; 24    ;
+; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 37    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; enable~reg0                            ; 1       ;
+; input_data_bus[3]                      ; 2       ;
+; input_data_bus[4]                      ; 1       ;
+; input_data_bus[5]                      ; 1       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |finalproject1|clk_count_400hz[5] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |finalproject1|input_data_bus[4]  ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |finalproject1|state              ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |finalproject1|Mux43              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |finalproject1|Mux43              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |finalproject1|Mux41              ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; No         ; |finalproject1|Mux34              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Dec 16 13:29:43 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalproject1 -c finalproject1
+Info: Found 2 design units, including 1 entities, in source file finalproject1.vhd
+    Info: Found design unit 1: finalproject1-behav
+    Info: Found entity 1: finalproject1
+Info: Elaborating entity "finalproject1" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at finalproject1.vhd(37): object "lcd_string_06" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(111): signal "lcd_string_02" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(111): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(113): signal "key1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(114): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(117): signal "lcd_string_07" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(117): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(121): signal "lcd_string_08" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(121): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(125): signal "lcd_string_03" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(125): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(127): signal "key1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(128): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(129): signal "lcd_string_07" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(129): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(134): signal "lcd_string_08" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(134): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(138): signal "lcd_string_04" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(138): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(140): signal "key1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(141): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(142): signal "lcd_string_07" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(142): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(147): signal "lcd_string_08" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(147): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(153): signal "lcd_string_05" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(153): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(155): signal "key1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(156): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(157): signal "lcd_string_07" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(157): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(166): signal "lcd_string_01" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at finalproject1.vhd(166): signal "char_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at finalproject1.vhd(106): inferring latch(es) for signal or variable "LED_R", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "LED_R[0]" at finalproject1.vhd(106)
+Info (10041): Inferred latch for "LED_R[1]" at finalproject1.vhd(106)
+Info (10041): Inferred latch for "LED_R[2]" at finalproject1.vhd(106)
+Info (10041): Inferred latch for "LED_R[3]" at finalproject1.vhd(106)
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "LED_R[3]$latch" merged with LATCH primitive "LED_R[0]$latch"
+    Info: Duplicate LATCH primitive "LED_R[2]$latch" merged with LATCH primitive "LED_R[0]$latch"
+    Info: Duplicate LATCH primitive "LED_R[1]$latch" merged with LATCH primitive "LED_R[0]$latch"
+Warning: Latch LED_R[0]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal switches[2]
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning: TRI or OPNDRN buffers permanently enabled
+    Warning: Node "data_bus_reg[0]"
+    Warning: Node "data_bus_reg[1]"
+    Warning: Node "data_bus_reg[2]"
+    Warning: Node "data_bus_reg[3]"
+    Warning: Node "data_bus_reg[4]"
+    Warning: Node "data_bus_reg[5]"
+    Warning: Node "data_bus_reg[6]"
+    Warning: Node "data_bus_reg[7]"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "onlcd" is stuck at VCC
+    Warning (13410): Pin "readwrite" is stuck at GND
+    Warning (13410): Pin "blon" is stuck at VCC
+Info: Implemented 307 device resources after synthesis - the final resource count might be different
+    Info: Implemented 10 input pins
+    Info: Implemented 13 output pins
+    Info: Implemented 8 bidirectional pins
+    Info: Implemented 276 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 49 warnings
+    Info: Peak virtual memory: 303 megabytes
+    Info: Processing ended: Sat Dec 16 13:29:47 2017
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+

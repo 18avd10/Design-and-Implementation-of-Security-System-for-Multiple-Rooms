@@ -1,0 +1,30 @@
+
+State Machine - |finalproject1|next_command
+Name next_command.en_off next_command.return_home next_command.line2 next_command.print_string next_command.mode_set next_command.display_off next_command.display_clear next_command.display_on next_command.func_set next_command.rst3 next_command.rst1 next_command.rst2 
+next_command.rst2 0 0 0 0 0 0 0 0 0 0 0 0 
+next_command.rst1 0 0 0 0 0 0 0 0 0 0 1 1 
+next_command.rst3 0 0 0 0 0 0 0 0 0 1 0 1 
+next_command.func_set 0 0 0 0 0 0 0 0 1 0 0 1 
+next_command.display_on 0 0 0 0 0 0 0 1 0 0 0 1 
+next_command.display_clear 0 0 0 0 0 0 1 0 0 0 0 1 
+next_command.display_off 0 0 0 0 0 1 0 0 0 0 0 1 
+next_command.mode_set 0 0 0 0 1 0 0 0 0 0 0 1 
+next_command.print_string 0 0 0 1 0 0 0 0 0 0 0 1 
+next_command.line2 0 0 1 0 0 0 0 0 0 0 0 1 
+next_command.return_home 0 1 0 0 0 0 0 0 0 0 0 1 
+next_command.en_off 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |finalproject1|state
+Name state.en_off state.return_home state.line2 state.print_string state.mode_set state.display_off state.display_clear state.display_on state.func_set state.rst3 state.rst2 state.rst1 
+state.rst1 0 0 0 0 0 0 0 0 0 0 0 0 
+state.rst2 0 0 0 0 0 0 0 0 0 0 1 1 
+state.rst3 0 0 0 0 0 0 0 0 0 1 0 1 
+state.func_set 0 0 0 0 0 0 0 0 1 0 0 1 
+state.display_on 0 0 0 0 0 0 0 1 0 0 0 1 
+state.display_clear 0 0 0 0 0 0 1 0 0 0 0 1 
+state.display_off 0 0 0 0 0 1 0 0 0 0 0 1 
+state.mode_set 0 0 0 0 1 0 0 0 0 0 0 1 
+state.print_string 0 0 0 1 0 0 0 0 0 0 0 1 
+state.line2 0 0 1 0 0 0 0 0 0 0 0 1 
+state.return_home 0 1 0 0 0 0 0 0 0 0 0 1 
+state.en_off 1 0 0 0 0 0 0 0 0 0 0 1 
